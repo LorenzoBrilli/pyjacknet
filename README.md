@@ -23,19 +23,23 @@ The same sample rate should be set in both client and server. There is no featur
 
 Since pyjacknet relies send and receive audio via JACK you need to have JACK installed on your system.
 
-pyjacknet requires python3 in order to work. It uses the [jackclient](https://github.com/spatialaudio/jackclient-python) library from spatialaudio, it can be installed via pip using 
-
-    python3 -m pip install JACK-Client
-
-pyjacknet also requires numpy for handling data. it can be installed using
-
-    python3 -m pip install numpy
+pyjacknet requires python3 in order to work. It uses the [jackclient](https://github.com/spatialaudio/jackclient-python) library from spatialaudio. Data are handled using [numpy](https://numpy.org/) so it is also necessary to install numpy. These packages are installed automatically if using pip.
 
 The last requirement is optional and needed only if you want to use opus compression: the [PyOgg](https://github.com/TeamPyOgg/PyOgg) from TeamPyOgg, it can be installed via pip using
 
     pip install git+https://github.com/TeamPyOgg/PyOgg
 
 N.B. At the moment (January 2021) the PyPI package of PyOgg is too old so to use the features required by pyjacknet you have to install the latest version on the git repo. This may change in the near future.
+
+## Installation
+
+If all dependencies are installed you can execute the package pyjacknet.
+
+If instead you want to install pyjacknet you have first to build with a pep517 compliant installer. If you use the [pep517](https://github.com/pypa/pep517) package, execute this command inside the project folder:
+
+    python -m pep517.build .
+
+You will have the distribution files inside the dist folder that are ready to be installed via pip.
 
 ## Usage
 

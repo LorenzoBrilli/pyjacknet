@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+
+"""
+
+    PyJackNet - Constants
+
+"""
+
+PJN_MODE_SERVER = 0
+PJN_MODE_CLIENT = 1
+
+PJN_CHANNELS_MONO = 1
+PJN_CHANNELS_STEREO = 2
+
+PJN_COMPRESSION_32 = 0
+PJN_COMPRESSION_16 = 1
+PJN_COMPRESSION_OPUS = 2
